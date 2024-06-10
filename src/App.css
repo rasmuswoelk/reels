@@ -1,0 +1,51 @@
+/* Global styles */
+#root,
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #c1c1c1;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* App.css */
+.reel-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth; /* Add smooth scrolling */
+  width: 600px;
+  margin: auto;
+  padding-top: 2vh; /* Adjust the padding to add space at the top */
+  padding-bottom: 2vh; /* Add padding at the bottom for smooth scrolling */
+}
+
+.reel-item {
+  flex: 0 0 calc(96vh - 2vh); /* Adjust the height to account for margin */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: white;
+  scroll-snap-align: start;
+  transition: background-color 0.3s;
+  margin-bottom: 2vh; /* Add margin between reels */
+}
+
+.reel-item video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-item.active {
+  /* background-color: green; */
+}
+
+.reel-item.inactive {
+  /* background-color: red; */
+}
